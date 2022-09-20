@@ -1,0 +1,56 @@
+<?php
+    include 'header.html'
+?>
+    <header class="header_container">
+        <h1 class="">GameBloog</h1>
+        <a href="admin.php">
+        <img src="svg/settingsM.svg" alt="">
+        </a>
+    </header>
+
+
+<?php
+        
+    include './conexao.php';
+    $db = getConexao();
+    $sql = "SELECT * FROM texts";
+    $statement = $db->prepare($sql);
+    $statement->execute();
+
+    while($row = $statement->fetch()){
+        echo '
+            <div class="blog_container">
+                <div class="text_container">
+                    <div class="tittle">
+                    <h4>
+                        '.$row['date'].'
+                    </h4>
+                    <a href="bigText.php?id='.$row['text_id'].'">
+                        <h2 class="titulo">
+                            '.$row['tittle'].'
+                        </h2>
+                    </a>   
+                    </div> 
+                    <div>
+                
+                        <div>
+                            <p class="p">
+                                &nbsp &nbsp'.substr($row['textt'], 0, 175).'...
+                            </p>
+                        </div>
+                        <a class="read" href="bigText.php?id='.$row['text_id'].'">
+                            <div class="image_container">
+                                <img class="img_container" src="images/'.$row['image_name'].'" alt="' .$row['image_name'].'">
+                            </div>
+                        </a>  
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        ';
+    }
+?>
+
+<?php
+    include 'footer.html'
+?>
