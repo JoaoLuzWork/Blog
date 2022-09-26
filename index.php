@@ -10,7 +10,12 @@
 
 
 <?php
+
     
+    if($_SESSION == "user_id"){
+
+    }
+
     //do the conection with de BD in this page
     include './conexao.php';
     $db = getConexao();

@@ -1,6 +1,4 @@
-<?php
-    include 'header.html'
-?>
+<?php include 'header.html'?>
 
 <?php
     include './conexao.php';
@@ -36,6 +34,4 @@
             </form>
         </div>
     </center>
-<?php
-    include 'footer.html'
-?>
+<?php include 'footer.html'?>
