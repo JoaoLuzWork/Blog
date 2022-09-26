@@ -10,13 +10,15 @@
 
 
 <?php
-        
+    
+    //do the conection with de BD in this page
     include './conexao.php';
     $db = getConexao();
     $sql = "SELECT * FROM texts";
     $statement = $db->prepare($sql);
     $statement->execute();
 
+    //select and show informations about BD
     while($row = $statement->fetch()){
         echo '
             <div class="blog_container">

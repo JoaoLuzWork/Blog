@@ -7,10 +7,10 @@
     $db = getConexao();
     $sql = "SELECT * FROM texts WHERE text_id = :id";
     $statement = $db->prepare($sql);
-    $valores = array(
+    $values = array(
         'id'=>$_GET['id']
     );
-    $statement->execute($valores);
+    $statement->execute($values);
     $edit = $statement->fetch();
 ?>
     <header class="admin_header">
