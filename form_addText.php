@@ -1,11 +1,5 @@
 <?php include 'header.html'?>
 
-  <header class="admin_header">
-    <h1>GameBloog</h1>
-    <a href="admin.php">
-       <img src="svg/arrow-left-square-fill.svg" alt="home">
-    </a>
-  </header>
   <center>
     <div class="container">
       <h1>Write something</h1>

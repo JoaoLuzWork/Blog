@@ -1,12 +1,6 @@
 <?php
     include 'header.html'
 ?>
-    <header class="admin_header">
-        <h1 class="">GameBloog</h1>
-        <a class="button_voltar" href="home.php">
-           <img src="svg/house-door-fill.svg" alt="home">
-        </a>
-    </header>
     <main class="home-wrapper">
         <?php
         if(isset($_GET['id']) and !empty($_GET['id']) ){

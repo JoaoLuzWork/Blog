@@ -1,6 +1,5 @@
-<?php include 'header.html'?>
-
-<?php
+<?php 
+    include 'header.html';
     include './conexao.php';
     $db = getConexao();
     $sql = "SELECT * FROM texts WHERE text_id = :id";
@@ -11,12 +10,7 @@
     $statement->execute($values);
     $edit = $statement->fetch();
 ?>
-    <header class="admin_header">
-        <h1>GameBloog</h1>
-        <a href="admin.php">
-           <img src="svg/arrow-left-square-fill.svg" alt="home">
-        </a>
-    </header>
+  
     <center>
         <div class="container">
             <h1>Text Edit</h1>

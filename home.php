@@ -1,13 +1,6 @@
 <?php
     include 'header.html'
 ?>
-    <header class="header_container">
-        <h1 class="">GameBloog</h1>
-        <a href="admin.php">
-        <img src="svg/settingsM.svg" alt="">
-        </a>
-    </header>
-
 
 <?php
 

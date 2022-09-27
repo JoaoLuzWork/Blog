@@ -7,12 +7,6 @@
     $statement = $db->prepare($sql);
     $statement->execute();        
 ?>
-    <header class="admin_header">
-        <h1 class="">GameBloog</h1>
-        <a class="button_voltar" href="home.php">
-           <img src="svg/house-door-fill.svg" alt="home">
-        </a>
-    </header>
     
     <main class="blog_container">
 

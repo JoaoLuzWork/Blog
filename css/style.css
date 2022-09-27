@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    
+    overflow-x: hidden;
 }
 
 .listagem
@@ -121,4 +121,18 @@ a{
     height:40px;
     background-color: #3E065F ;
     color: white;
+}
+
+.button_menu
+{
+    background: none;
+}
+
+.menuBox
+{
+    position: absolute;
+    background-color: black;
+    transform: translate(500px);
+    width:400px;
+    height: 100px;
 }

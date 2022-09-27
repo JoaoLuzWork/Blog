@@ -8,4 +8,4 @@
         <button>Enviar</button>
     </form>
     <br>
-    <?php include 'footer.html'?>
+<?php include 'footer.html'?>
