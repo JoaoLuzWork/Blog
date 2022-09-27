@@ -2,12 +2,12 @@
     if (isset($_POST['email'], $_POST['password']) && $_POST['email'] != "" && $_POST['password'] != ""){
         include './conexao.php';
         $db = getConexao();
-        $sql = "SELECT * from users WHERE email = :email AND pass = :pass";
+        $sql = "SELECT * from users WHERE user_email = :user_email AND user_pass = :user_pass";
         $statement = $db->prepare($sql);
         $password_md5 = md5($_POST['password']);
         $values = array(
-            'email'=>$_POST['email'],
-            'pass'=>$password_md5
+            'user_email'=>$_POST['email'],
+            'user_pass'=>$password_md5
         );
         $statement->execute($values);
         if ($statement->rowCount() > 0){
@@ -16,7 +16,7 @@
             $_SESSION['id'] = $row['id'];
             header('Location: home.php');
         } else {
-            header('Location: form_login.php');
+            header('Location: index.php');
         }
         
     } else {

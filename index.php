@@ -5,5 +5,5 @@
         <input type="password" name="password" placeholder="password">
         <button>Login</button>
     </form>
-    <a href="">Create acount</a>
+    <a href="form_register.php">Create acount</a>
 <?php include 'footer.html'?>

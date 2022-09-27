@@ -9,7 +9,7 @@
 ?>
     <header class="admin_header">
         <h1 class="">GameBloog</h1>
-        <a class="button_voltar" href="index.php">
+        <a class="button_voltar" href="home.php">
            <img src="svg/house-door-fill.svg" alt="home">
         </a>
     </header>
