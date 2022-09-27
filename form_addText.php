@@ -1,6 +1,4 @@
-<?php
-    include 'header.html'
-?>
+<?php include 'header.html'?>
 
   <header class="admin_header">
     <h1>GameBloog</h1>
@@ -29,6 +27,4 @@
     </div>
   </center>
   
-  <?php
-    include 'footer.html'
-?>
+<?php include 'footer.html'?>
