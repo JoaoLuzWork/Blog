@@ -5,13 +5,16 @@
     $db = getConexao();
     $sql = "SELECT * FROM texts ORDER BY text_id";
     $statement = $db->prepare($sql);
-    $statement->execute();        
+    $statement->execute();    
+    session_start();
+    if ($_SESSION['admin_cond'] != 1){
+        
+        header('Location: home.php?msg=noPermission');
+    }
 ?>
     
     <main class="blog_container">
 
-        
-        
         <table>
             <tr class="table_header">
                 <th> Id </th>

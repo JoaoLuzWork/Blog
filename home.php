@@ -11,7 +11,16 @@
     $statement = $db->prepare($sql);
     $statement->execute();
 
-    
+    if(isset($_GET['msg'])){
+        switch ($_GET['msg']){
+            case "noPermission":
+                echo '<h2>You cannot access admin page!</h2>';
+                break;
+            default:
+                echo '<h2>Erro!</h2>';
+                break;
+        }
+    }
     //select and show informations about BD
     while($row = $statement->fetch()){
         echo '
