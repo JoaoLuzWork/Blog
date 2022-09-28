@@ -1,5 +1,5 @@
 <?php 
-    include 'header.html';
+    include 'header.php';
     include './conexao.php';
     $db = getConexao();
     $sql = "SELECT * FROM texts WHERE text_id = :id";

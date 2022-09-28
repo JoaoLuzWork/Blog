@@ -14,13 +14,9 @@
             $row = $statement->fetch();
             session_start();
             $_SESSION['admin_cond'] = $row['admin_cond'];
-            $_SESSION['id'] = $row['id'];
             header('Location: home.php');
-        } else {
-            header('Location: index.php');
-        }
-        
+        } 
     } else {
-        echo '<p>Dados incompletos!</p>';
+        header('Location: index.php?msg=user');
     }
 ?>

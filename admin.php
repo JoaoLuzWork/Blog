@@ -1,17 +1,16 @@
 <?php
-    include 'header.html';
+    include 'header.php';
 
     include 'conexao.php';
     $db = getConexao();
     $sql = "SELECT * FROM texts ORDER BY text_id";
     $statement = $db->prepare($sql);
     $statement->execute();    
-    session_start();
     if ($_SESSION['admin_cond'] != 1){
         
         header('Location: home.php?msg=noPermission');
     }
-?>
+    ?>
     
     <main class="blog_container">
 
@@ -25,22 +24,6 @@
             </tr>
 
             <?php
-                if(isset($_GET['msg'])){
-                    switch ($_GET['msg']){
-                        case "registered":
-                            echo '<h2>Text registered successfully!</h2>';
-                            break;
-                        case "deleted":
-                            echo '<h2>Text successfully deleted!</h2>';
-                            break;
-                        case "updated":
-                                echo '<h2>Text successfully updated!</h2>';
-                                break;
-                        default:
-                            echo '<h2>Erro!</h2>';
-                            break;
-                    }
-                }
                 while($row = $statement->fetch()){
                     echo '
                         <tr>

@@ -12,8 +12,8 @@
             'admin_cond'=>$_POST['admin']
         );
         $statement->execute($values);
-        header('Location: index.php');
+        header('Location: admin.php?msg=successful');
     } else {
-        echo '<p>Dados incompletos! Usuário não foi cadastrado.</p>';
+        header('Location: form_admin_register.php?msg=need');
     }
 ?>

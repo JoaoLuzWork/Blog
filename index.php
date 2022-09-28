@@ -1,8 +1,14 @@
-<?php include 'header.html'?>
+<?php 
+    include 'header.php';
+    if(isset($_SESSION['admin_cond']))
+    {
+        header('location: home.php');
+    }
+?>
     
 <center>
     <div class="container">
-        <h1>Faça seu login:</h1>
+        <h1>Sing in:</h1>
         <form class="form_b" action="login.php" method="post">
             <div class="divCont">
                 <input type="text" name="email" placeholder="e-mail" size="50">

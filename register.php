@@ -11,8 +11,8 @@
             'user_pass'=>$password_md5,
         );
         $statement->execute($values);
-        header('Location: index.php');
+        header('Location: index.php?msg=successful');
     } else {
-        echo '<p>Dados incompletos! Usuário não foi cadastrado.</p>';
+        header('Location: form_register.php?msg=need');
     }
 ?>

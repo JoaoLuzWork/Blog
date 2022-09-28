@@ -1,8 +1,10 @@
 <?php
-    include 'header.html'
-?>
+    include 'header.php';
 
-<?php
+    if (!isset($_SESSION['admin_cond'])){
+        
+        header('Location: index.php?msg=login');
+    }
 
     //do the conection with de BD in this page
     include './conexao.php';
@@ -11,16 +13,6 @@
     $statement = $db->prepare($sql);
     $statement->execute();
 
-    if(isset($_GET['msg'])){
-        switch ($_GET['msg']){
-            case "noPermission":
-                echo '<h2>You cannot access admin page!</h2>';
-                break;
-            default:
-                echo '<h2>Erro!</h2>';
-                break;
-        }
-    }
     //select and show informations about BD
     while($row = $statement->fetch()){
         echo '
