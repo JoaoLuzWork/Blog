@@ -15,7 +15,9 @@
             session_start();
             $_SESSION['admin_cond'] = $row['admin_cond'];
             header('Location: home.php');
-        } 
+        } else {
+            header('Location: index.php?msg=user'); 
+        }
     } else {
         header('Location: index.php?msg=user');
     }
