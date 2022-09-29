@@ -15,6 +15,12 @@
             </div>
             <div class="divCont">
                 <input type="password" name="password" placeholder="password" size="50">
+                <?php 
+                /* 
+                email to admin test is: jojacola@gmail.com 
+                password to admin test is: 1234
+                */
+                ?>
             </div>
             <button>Login</button>
         </form>
