@@ -4,7 +4,7 @@
         $db = getConexao();
         $sql = "SELECT * from users WHERE user_email = :user_email AND user_pass = :user_pass";
         $statement = $db->prepare($sql);
-        $password_md5 = md5($_POST['password']);
+        $password_md5 = md5($_POST['password']); 
         $values = array(
             'user_email'=>$_POST['email'],
             'user_pass'=>$password_md5

@@ -3,7 +3,7 @@
     //do some tests to confirm if the attributes are correct
     if (isset($_POST['tittle'], $_POST['textt']) && $_POST['tittle'] != "" && $_POST['textt'] != "" && $_GET['id'] != ""){
         include './conexao.php';
-        //To edit almost all informations in DB of one especicly id
+        //To edit almost all informations in DB of one especificly id
         $db = getConexao();
         $sql = "UPDATE texts SET tittle = :tittle, textt = :textt WHERE text_id = :id";
         $statement = $db->prepare($sql);
