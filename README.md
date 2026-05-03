@@ -3,6 +3,7 @@
 
 A full-stack blog application built from scratch with PHP, MySQL, JavaScript, and CSS. The project features a complete content management system with separate user and admin roles, secure authentication, and full CRUD functionality for posts.
 
+Key features:
 - User registration, login, and session management
 - Admin panel with separate registration flow for elevated permissions
 - Create, read, update, and delete blog posts (CRUD)
