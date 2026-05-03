@@ -1,2 +1,2 @@
 # Blog
- It's a blog, this blog has a interative inteface etc
+ Blog — Full-Stack PHP Blog Platform with Admin Dashboard
