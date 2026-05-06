@@ -38,36 +38,6 @@ The application is built without any frameworks — pure PHP, HTML, CSS, and Jav
 
 ---
 
-## 📂 Project Structure
-Blog/
-├── css/                    # Stylesheets
-├── images/                 # Static images
-├── svg/                    # SVG assets
-├── conexao.php             # Database connection layer
-├── index.php               # Landing page
-├── home.php                # Main blog feed
-├── header.php              # Reusable site header
-├── footer.html             # Reusable site footer
-├── login.php               # User login
-├── logout.php              # Session termination
-├── register.php            # User registration
-├── form_register.php       # User registration form
-├── admin.php               # Admin dashboard
-├── admin_register.php      # Admin account creation
-├── form_admin_register.php # Admin registration form
-├── Texts.php               # Posts retrieval logic
-├── bigText.php             # Single-post detail view
-├── form_addText.php        # New post form
-├── form_editText.php       # Edit post form
-├── textEdit.php            # Edit post processing
-├── textDelete.php          # Delete post processing
-├── uploadFile.php          # File upload handler
-├── script.js               # Client-side interactivity
-├── users.sql               # Users table schema
-└── texts.sql               # Posts table schema
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -112,38 +82,6 @@ Blog/
 5. **Create an admin account**
    - Visit `admin_register.php` to create the first administrator
    - Log in via `login.php` to access the admin dashboard
-
----
-
-## 🔒 Security Notes
-
-This project was built as a learning exercise. Before deploying to production, the following improvements would be recommended:
-
-- Use prepared statements for all SQL queries to prevent SQL injection
-- Store database credentials in environment variables (e.g. `.env` file)
-- Hash all passwords with `password_hash()` and verify with `password_verify()`
-- Implement CSRF token protection on all forms
-- Sanitise and validate all user input
-- Validate file uploads (type, size, extension) before saving
-
----
-
-## 🎯 What I Learned
-
-Building this project gave me hands-on experience with:
-
-- Designing relational database schemas
-- Implementing authentication and session management in PHP
-- Structuring a multi-page application with reusable components
-- Handling file uploads safely
-- Building role-based permission systems
-- Working with raw SQL and PHP database connections
-
----
-
-## 📸 Screenshots
-
-> _Coming soon — screenshots of the home feed, admin dashboard, and post editor._
 
 ---
 
