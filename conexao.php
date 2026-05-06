@@ -1,7 +1,7 @@
 <?php 
 
 function getConexao(){
-    $host = "mysql:host=localhost;dbname=blog";
+    $host = "mysql:host=localhost;dbname=blog_db";
     $usuario = "root";
     $password = "";
 
